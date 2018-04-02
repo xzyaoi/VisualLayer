@@ -16,7 +16,27 @@
   </v-container>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<script>
+import { Estimator } from '@/layers/estimator'
+import { MnistData } from '@/layers/data'
+export default {
+  mounted () {
+    this.train()
+  },
+  methods: {
+    async train () {
+      let data = new MnistData(0.3)
+      await data.load()
+      console.log(data)
+      let e = new Estimator(100, 0.001, 100)
+      console.log('start training')
+      e.train(data)
+    }
+  }
+}
+</script>
+
+
 <style scoped>
 h1, h2 {
   font-weight: normal;
