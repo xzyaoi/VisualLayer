@@ -4192,9 +4192,9 @@ jest-runtime@^21.2.1:
     write-file-atomic "^2.1.0"
     yargs "^9.0.0"
 
-jest-serializer-vue@^0.3.0:
-  version "0.3.0"
-  resolved "http://registry.npm.taobao.org/jest-serializer-vue/download/jest-serializer-vue-0.3.0.tgz#2128d0c1c83c3bcb2f4fb96104402626bb75506d"
+jest-serializer-vue@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/jest-serializer-vue/download/jest-serializer-vue-1.0.0.tgz#82514e9b3d94a17fe618df3ede84046090f94815"
   dependencies:
     pretty "2.0.0"
 
