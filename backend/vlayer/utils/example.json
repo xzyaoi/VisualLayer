@@ -1,0 +1,18 @@
+{
+    "layers" : [
+        {
+            "name": "input",
+            "type": "InputLayer"
+        },
+        {
+            "name": "drop1",
+            "type": "DropoutLayer",
+            "keep": 0.8
+        },
+        {
+            "name": "relu1",
+            "type": "DenseLayer",
+            "units": 800
+        }
+    ]
+}
