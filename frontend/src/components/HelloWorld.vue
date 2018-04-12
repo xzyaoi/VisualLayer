@@ -8,6 +8,7 @@
           <footer>
             <small>
               <em>&mdash;John Johnson</em>
+              <v-btn @click="train()">Start</v-btn>
             </small>
           </footer>
         </blockquote>
@@ -20,7 +21,7 @@
 import { Estimator } from '@/layers/estimator'
 import { MnistData } from '@/layers/data'
 export default {
-  mounted () {
+  created () {
     this.train()
   },
   methods: {
@@ -28,9 +29,9 @@ export default {
       let data = new MnistData(0.3)
       await data.load()
       console.log(data)
-      let e = new Estimator(100, 0.001, 100)
+      let e = new Estimator(100, 0.001, 64)
       console.log('start training')
-      e.train(data)
+      await e.train(data)
     }
   }
 }

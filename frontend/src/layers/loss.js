@@ -5,5 +5,5 @@ function softmaxCrossEntropyLoss (labels, ys) {
 }
 
 export {
-    softmaxCrossEntropyLoss
+  softmaxCrossEntropyLoss
 }

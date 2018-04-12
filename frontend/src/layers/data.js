@@ -11,8 +11,8 @@ export class MnistData {
     this.TRAIN_TEST_RATIO = 1 - TEST_RATIO
     this.NUM_TRAIN_ELEMENTS = Math.floor(this.TRAIN_TEST_RATIO * this.NUM_DATASET_ELEMENTS)
     this.NUM_TEST_ELEMENTS = this.NUM_DATASET_ELEMENTS - this.NUM_TRAIN_ELEMENTS
-    this.MNIST_IMAGES_SPRITE_PATH = 'https://storage.googleapis.com/learnjs-data/model-builder/mnist_images.png'
-    this.MNIST_LABELS_PATH = 'https://storage.googleapis.com/learnjs-data/model-builder/mnist_labels_uint8'
+    this.MNIST_IMAGES_SPRITE_PATH = 'http://storage-googleapis.proxy.ustclug.org/learnjs-data/model-builder/mnist_images.png'
+    this.MNIST_LABELS_PATH = 'http://storage-googleapis.proxy.ustclug.org/learnjs-data/model-builder/mnist_labels_uint8'
   }
   async load () {
     const img = new Image()
@@ -87,6 +87,7 @@ export class MnistData {
       return this.testIndices[this.shuffledTestIndex]
     })
   }
+
   nextBatch (batchSize, data, index) {
     const batchImagesArray = new Float32Array(batchSize * this.IMAGE_SIZE)
     const batchLabelsArray = new Uint8Array(batchSize * this.NUM_CLASSES)
